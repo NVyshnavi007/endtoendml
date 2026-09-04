@@ -1,0 +1,6 @@
+import joblib
+joblib.dump(best_model, "house_price_model.joblib")
+loaded_model = joblib.load("house_price_model.joblib")
+loaded_model.predict(X_test)
+predictions_joblib = loaded_model.predict(X_test)
+
